@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Domi & Our Story</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- PARTICLES + HEARTS -->
+<canvas id="particles"></canvas>
+<canvas id="hearts"></canvas>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content text-center">
+    <h1>Hey My Gulab Jamun 💖</h1>
+    <p>Started on 25 Feb 2024 – and every moment since has been magic ✨</p>
+    <button class="btn btn-outline-light mt-3" onclick="scrollToSection('timeline')">Begin Our Story</button>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="container py-5">
+  <h2 class="text-center mb-5">The Story of Us</h2>
+  <div class="timeline">
+
+    <div class="timeline-item left reveal">
+      <div class="timeline-content">
+        <h4>7 th Floor Memories</h4>
+        <p>The day our journey began. I never knew it would become the most beautiful chapter of my life, Domi.</p>
+        <img src="images/timeline1.jpg" alt="First Day">
+      </div>
+    </div>
+
+    <div class="timeline-item right reveal">
+      <div class="timeline-content">
+        <h4>My Last Day at TCS</h4>
+        <p>I never forgot our 5 pm meeting near fountain and the last whole week, you went 6:45 instead of 5:30</p>
+        <img src="images/timeline2.jpg" alt="Trip">
+      </div>
+    </div>
+
+    <div class="timeline-item left reveal">
+      <div class="timeline-content">
+        <h4>Remeber this day?</h4>
+        <p>Will give you a hint, Vettukizhi and Vettu puli inside an umbrella, by the way the kiss was so intense!😄</p>
+        <img src="images/timeline3.jpg" alt="Happy Day">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="container py-5">
+  <h2 class="text-center mb-5">Special Moments</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4 reveal" data-speed="0.9">
+      <div class="gallery-card" onclick="openModal(['images/gallery1-1.jpg','images/gallery1-2.jpg','images/gallery1-3.jpg'])">
+        <img src="images/gallery1-1.jpg" alt="Moment 1">
+        <p class="text-center mt-2">Pondi Trip</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 reveal" data-speed="1.1">
+      <div class="gallery-card" onclick="openModal(['images/gallery2-1.jpg','images/gallery2-2.jpg','images/gallery2-3.jpg'])">
+        <img src="images/gallery2-1.jpg" alt="Moment 2">
+        <p class="text-center mt-2">Munnar Trip</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 reveal" data-speed="1.0">
+      <div class="gallery-card" onclick="openModal(['images/gallery3-1.jpg','images/gallery3-2.jpg','images/gallery3-3.jpg'])">
+        <img src="images/gallery3-1.jpg" alt="Moment 3">
+        <p class="text-center mt-2">Bangalore Trip</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEEL GOOD CHATS -->
+<section id="chats" class="container py-5">
+  <h2 class="text-center mb-5">Conversations That Made Me Smile</h2>
+  <div class="row g-4 reveal">
+    <div class="col-md-4">
+      <div class="chat-card">
+        <img src="images/chat1.jpg" alt="Chat Screenshot">
+        <p class="mt-2 text-center">The Day ❤️</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="chat-card">
+        <img src="images/chat2.jpg" alt="Chat Screenshot">
+        <p class="mt-2 text-center">Indirect hint ah? Kedi😄</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="chat-card">
+        <img src="images/chat3.jpg" alt="Chat Screenshot">
+        <p class="mt-2 text-center">we got married!😁 </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUESTION & ANSWER CENTER -->
+<section id="qa" class="qa-section reveal">
+  <div id="questionContainer" class="text-center"></div>
+
+  <div id="proposalSection" class="text-center mt-5 hidden-section">
+    <h1 class="proposal-text">Will You Continue This Journey With Me, Domi?</h1>
+    <button class="btn btn-pink mt-3 me-3" onclick="sayYes()">Yes 💍</button>
+    <button class="btn btn-outline-light mt-3" onmouseover="moveNo(this)">No</button>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="galleryModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white p-3">
+      <div id="modalImages" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carouselInner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#modalImages" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#modalImages" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <button class="btn btn-light mt-3 w-100" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
