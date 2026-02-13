@@ -182,3 +182,27 @@ body{
   .timeline-item{ width:100%; left:0 !important; margin-bottom:30px; }
   .timeline-item::after{ left:50%; }
 }
+/* MOBILE FIX FOR TIMELINE */
+@media (max-width: 768px) {
+
+  .timeline::after {
+    left: 20px;   /* Move line to left side */
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;  /* Give space for the line */
+    padding-right: 20px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: 12px;  /* Move circle to align with line */
+  }
+
+}
